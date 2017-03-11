@@ -11,6 +11,7 @@ require_once 'App.php';
 
     $url = App::base_url();
     $id = App::get_id();
+
 ?>
     <!doctype html>
     <html lang="en">
@@ -29,8 +30,9 @@ require_once 'App.php';
     <body>
     <nav>
         <ul>
-            <li><a href="<?php echo ROOT; ?>home/">Home</a></li>
-            <li><a href="<?php echo ROOT; ?>test/">Test</a></li>
+            <li><a href="<?php echo ROOT; ?>home">Home</a></li>
+            <li><a href="<?php echo ROOT; ?>test">Test</a></li>
+            <li><a href="<?php echo ROOT; ?>about">About</a></li>
         </ul>
     </nav>
 
@@ -38,7 +40,7 @@ require_once 'App.php';
     <a href="<?php echo ROOT . $url . '/2'  ; ?>">Post № 2</a>
     <a href="<?php echo ROOT . $url . '/3'  ; ?>">Post № 3</a>
 
-    <?php echo ( isset( $id ) ) ?  '<hr>' . $id : '' ; ?>
+    <?php print_r($id) ; ?>
 
     </body>
     </html>
