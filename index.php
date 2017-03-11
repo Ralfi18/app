@@ -38,7 +38,7 @@ require_once 'App.php';
     <a href="<?php echo ROOT . $url . '/2'  ; ?>">Post № 2</a>
     <a href="<?php echo ROOT . $url . '/3'  ; ?>">Post № 3</a>
 
-    <?php echo  ( isset($id) ) ?  '<hr>' . $id : ''; ?>
+    <?php echo ( isset( $id ) ) ?  '<hr>' . $id : '' ; ?>
 
     </body>
     </html>
