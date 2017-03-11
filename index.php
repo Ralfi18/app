@@ -29,14 +29,14 @@ require_once 'App.php';
     <body>
     <nav>
         <ul>
-            <li><a href="http://localhost/app/home/">Home</a></li>
-            <li><a href="http://localhost/app/test/">Test</a></li>
+            <li><a href="<?php echo ROOT; ?>home/">Home</a></li>
+            <li><a href="<?php echo ROOT; ?>test/">Test</a></li>
         </ul>
     </nav>
 
-    <a href="<?php echo 'http://localhost/app/' . $url . '/1'  ; ?>">Post № 1</a>
-    <a href="<?php echo 'http://localhost/app/' . $url . '/2'  ; ?>">Post № 2</a>
-    <a href="<?php echo 'http://localhost/app/' . $url . '/3'  ; ?>">Post № 3</a>
+    <a href="<?php echo ROOT . $url . '/1'  ; ?>">Post № 1</a>
+    <a href="<?php echo ROOT . $url . '/2'  ; ?>">Post № 2</a>
+    <a href="<?php echo ROOT . $url . '/3'  ; ?>">Post № 3</a>
 
     <?php echo  ( isset($id) ) ?  '<hr>' . $id : ''; ?>
 
