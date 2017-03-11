@@ -40,7 +40,7 @@ require_once 'App.php';
     <a href="<?php echo ROOT . $url . '/2'  ; ?>">Post № 2</a>
     <a href="<?php echo ROOT . $url . '/3'  ; ?>">Post № 3</a>
 
-    <?php print_r($id) ; ?>
+    <?php // print_r($id) ; ?>
 
     </body>
     </html>

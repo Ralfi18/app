@@ -16,7 +16,7 @@ class App
 
     private static $_param;
 
-    public static function init( $param = null )
+    public static function init(  )
     {
         if ( !empty(self::$_request_uri) ) {
             self::$_url = explode('/', trim(self::$_request_uri, '/'));
@@ -60,14 +60,14 @@ class App
     {
         if ( self::$_uri_len > 2   )
         {
-            if ( self::$_url[2] !== '' && self::$_param != '' && file_exists(self::$_param.'.php') )
+            if ( self::$_url[2] !== '' )
             {
                 self::$_id  = self::$_url[2];
                 return self::$_id ;
             }
             else
             {
-                //die('The ID is not correct!');
+                die('The ID don\'t exist');
             }
         }
         else
