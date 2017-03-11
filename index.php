@@ -9,7 +9,8 @@ require_once 'App.php';
     App::dir_name('inc');
     App::init();
 
-
+    $url = App::base_url();
+    $id = App::get_id();
 ?>
     <!doctype html>
     <html lang="en">
@@ -18,7 +19,7 @@ require_once 'App.php';
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title><?php echo App::base_url(); ?></title>
+        <title><?php echo $url; ?></title>
         <style>
             nav li {
                 display: inline-block;
@@ -28,17 +29,16 @@ require_once 'App.php';
     <body>
     <nav>
         <ul>
-            <li><a href="home">Home</a></li>
-            <li><a href="test">Test</a></li>
+            <li><a href="http://localhost/app/home/">Home</a></li>
+            <li><a href="http://localhost/app/test/">Test</a></li>
         </ul>
     </nav>
 
-    <?php
+    <a href="<?php echo 'http://localhost/app/' . $url . '/1'  ; ?>">Post № 1</a>
+    <a href="<?php echo 'http://localhost/app/' . $url . '/2'  ; ?>">Post № 2</a>
+    <a href="<?php echo 'http://localhost/app/' . $url . '/3'  ; ?>">Post № 3</a>
 
-
-    echo App::get_id();
-
-    ?>
+    <?php echo  ( isset($id) ) ?  '<hr>' . $id : ''; ?>
 
     </body>
     </html>
